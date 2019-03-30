@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    {# input type='text'是创建单行文本框,另外type = 'textarea'是多行文本框  #}
+    <label>用户名:</label><input type="text" name="username"> <br>
+    <label>密码:</label><input type="text" name="password"> <br>
+    <label>确认密码:</label><input type="text" name="password2"> <br>
+    {#  创建一个按钮，点击之后会自动提交表单 #}
+    <input type="submit" name="提交">
+    {#通过遍历，获取flash的内容#}
+    {% for message in get_flashed_messages() %}
+        {{ message}}
+    {% endfor %}
+
+
+
+
+</form>
+
+
+
+
+
+
+</body>
+</html>
